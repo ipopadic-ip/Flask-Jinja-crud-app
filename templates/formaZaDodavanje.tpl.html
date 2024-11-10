@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+    <!-- <script src="skripta.js" defer></script> -->
+</head>
+
+<body>
+    <form action="/dodaj" method="post" onsubmit="return validacija()">
+        <!-- <div>
+            <label for="brojIndeksaId">Broj indeksa (GGGG/BBBBBBB): </label>
+            <input type="text" name="brojIndeksa" id="brojIndeksaPolje" placeholder="GGGG/BBBBBB" required>
+        </div> -->
+        <!-- <div>
+            <label for="studijskiProgram">Studijski program:</label>
+            <select name="studijskiProgram" id="studijskiProgram">
+                {% for program in programi %}
+                <option value="{{program.id}}">{{program.naziv}}</option>
+                {% endfor %}
+            </select>
+        </div> -->
+        <div>
+            <label for="ime">Ime: </label>
+            <input type="text" name="ime" id="ime" required>
+        </div>
+        <div>
+            <label for="prezime">Prezime: </label>
+            <input type="text" name="prezime" id="prezime" required>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"  required>
+        </div>
+        <div>
+            <label for="telefon">Telefon: </label>
+            <input type="number" name="telefon" id="telefon" required>
+        </div>
+        <div>
+            <button type="submit">Dodaj</button>
+            <input type="submit" value="Dodaj">
+        </div>
+    </form>
+</body>
+
+</html>

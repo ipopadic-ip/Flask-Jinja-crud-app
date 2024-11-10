@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+    <!-- <script src="skripta.js" defer></script> -->
+</head>
+
+<body>
+    <form action="/sobaDodaj" method="post" onsubmit="return validacija()">
+        <div>
+            <label for="naziv">Naziv: </label>
+            <input type="text" name="naziv" id="naziv" required>
+        </div>
+        <div>
+            <label for="broj_kreveta">broj_kreveta: </label>
+            <input type="text" name="broj_kreveta" id="broj_kreveta" required>
+        </div>
+        <div>
+            <label for="cena">Cena: </label>
+            <input type="number" name="cena" id="cena" required>
+        </div>
+        <div>
+            <label for="telefon">Telefon: </label>
+            <input type="number" name="telefon" id="telefon" required>
+        </div>
+        <div>
+            <button type="submit">Dodaj</button>
+            <input type="submit" value="Dodaj">
+        </div>
+    </form>
+</body>
+
+</html>

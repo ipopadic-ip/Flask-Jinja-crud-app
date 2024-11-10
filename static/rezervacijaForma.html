@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Soba</title>
+    <script src="skripta.js" defer></script>
+</head>
+
+<body>
+    <form action="/rezervacijaDodaj" method="post">
+      
+        <div>
+            <label for="soba_id">Soba id:</label>
+            <select name="soba_id" id="soba_id">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div>
+            <label for="gost_id">Gost id:</label>
+            <select name="gost_id" id="gost_id">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div>
+            <label for="datum_od">Datum Od: </label>
+            <input type="text" name="datum_od" id="datum_od" required>
+        </div>
+        <div>
+            <label for="datum_do">Datum Do: </label>
+            <input type="text" name="datum_do" id="datum_do" required>
+        </div>
+        <div>
+            <label for="cena">Cena: </label>
+            <input type="number" name="cena" id="cena" min="5" max="10" required>
+        </div>
+        <div>
+            <button type="submit">Dodaj</button>
+            <input type="submit" value="Dodaj">
+        </div>
+    </form>
+</body>
+
+</html>

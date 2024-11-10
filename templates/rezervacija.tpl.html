@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Sobe</th>
+                <th>ID Gosta</th>
+                <th>Datum od</th>
+                <th>Datum do</th>
+                <th>Cena</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rezervacija in rezervacije %}
+            <tr class="{% if rezervacija.obrisan %}obrisan-red{% endif %}">
+                <!-- <td>{{loop.index}}.</td> -->
+                <td>{{rezervacija.soba_id}}</td>
+                <td>{{rezervacija.gost_id}}</td>
+                <td>{{rezervacija.datum_od}}</td>
+                <td>{{rezervacija.datum_do}}</td>
+                <td>{{rezervacija.cena}}</td>
+                <td>
+                    <a href="/rezervacijaIzmenaForma?id_rezervacija={{rezervacija.id}}">Izmeni</a>
+                    <a href="/rezervacijaUklanjanje?id_rezervacija={{rezervacija.id}}">Ukloni</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

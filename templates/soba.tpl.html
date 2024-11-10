@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Naziv</th>
+                <th>Broj_kreveta</th>
+                <th>Cena</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for soba in sobe %}
+            <tr class="{% if soba.obrisan %}obrisan-red{% endif %}">
+                <!-- <td>{{loop.index}}.</td> -->
+                <td>{{soba.naziv}}</td>
+                <td>{{soba.broj_kreveta}}</td>
+                <td>{{soba.cena}}</td>
+                <td>
+                    <a href="/sobaIzmenaForma?id_soba={{soba.id}}">Izmeni</a>
+                    <a href="/sobaUklanjanje?id_soba={{soba.id}}">Ukloni</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

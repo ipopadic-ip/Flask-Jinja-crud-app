@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for gost in gosti %}
+            <tr class="{% if gost.obrisan %}obrisan-red{% endif %}">
+                <!-- <td>{{loop.index}}.</td> -->
+                <td>{{gost.ime}}</td>
+                <td>{{gost.prezime}}</td>
+                <td>{{gost.email}}</td>
+                <td>{{gost.telefon}}</td>
+                <td>
+                    <a href="/izmenaForma?id_gosta={{gost.id}}">Izmeni</a>
+                    <a href="/uklanjanje?id_gosta={{gost.id}}">Ukloni</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

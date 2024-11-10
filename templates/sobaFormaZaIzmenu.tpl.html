@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+    <!-- <script src="skripta.js" defer></script> -->
+</head>
+
+<body>
+    <form action="/sobaIzmeni?id_soba={{soba.id}}" method="post">
+       
+        
+        <div>
+            <label for="naziv">Naziv: </label>
+            <input type="text" name="naziv" id="naziv" value="{{soba.naziv}}" required>
+        </div>
+        <div>
+            <label for="broj_kreveta">broj_kreveta: </label>
+            <input type="text" name="broj_kreveta" id="broj_kreveta" value="{{soba.broj_kreveta}}" required>
+        </div>
+        <div>
+            <label for="cena">Cena: </label>
+            <input type="cena" name="cena" id="cena"value="{{soba.cena}}" required>
+        </div>
+        <div>
+            <button type="submit">Izmeni</button>
+        </div>
+    </form>
+</body>
+
+</html>

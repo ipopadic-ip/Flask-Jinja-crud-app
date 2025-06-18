@@ -50,6 +50,9 @@ python <your-app-file>.py
 Run the Flask application:
 flask run
 
+---
+Open your browser and go to http://localhost:5000 to view the application.
+
 
 ## Author
 
@@ -68,9 +71,6 @@ That includes:
 
 Failure to provide visible credit is a violation of this license.
 
----
-Open your browser and go to http://localhost:5000 to view the application.
 
-# License
-This project is open-source and available under the MIT License.
+
 
